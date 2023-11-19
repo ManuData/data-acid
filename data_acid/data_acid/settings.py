@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic', # Python package to manage static files
     'blog.apps.BlogConfig' # Added the blog app
 ]
 
@@ -66,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'data_acid.urls'
@@ -94,9 +96,7 @@ WSGI_APPLICATION = 'data_acid.wsgi.application'
 
 
 # For local development
-
-
-
+"""
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -107,10 +107,9 @@ DATABASES = {
             'PASSWORD':env("DB_PASSWORD"),
         }
     }
-
-
-
 """
+
+
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -121,7 +120,7 @@ DATABASES = {
         }
     }
 
-"""
+
 
 
 
@@ -159,8 +158,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = 'static/'
+
 STATIC_URL = 'static/'
+STATICFILES_DIR = [str(BASE_DIR.joinpath('static'))] # Tells Django where to look to the static files
+STATIC_ROOT= os.path.join(BASE_DIR,"staticfiles")   # The folder where the statics files are saved when we run the command "collect static"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 

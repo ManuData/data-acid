@@ -1,0 +1,34 @@
+
+
+
+<form id="leadsForm" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#leadsForm').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '{% url "leads_form" %}',  // Change "your_view_name" to the actual name of your view
+            data: $(this).serialize(),
+            success: function(response) {
+                if (response.success) {
+                    alert('Form submitted successfully!');
+                    // You can add further actions here if needed
+                } else {
+                    alert('Form submission failed. Please check the errors.');
+                    console.log(response.errors);
+                }
+            },
+            error: function(error) {
+                console.log('Error:', error);
+            }
+        });
+    });
+});
+</script>
