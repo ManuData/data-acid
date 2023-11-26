@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'data_acid.wsgi.application'
 
 
 # For local development
-"""
+
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -107,9 +107,9 @@ DATABASES = {
             'PASSWORD':env("DB_PASSWORD"),
         }
     }
+
+
 """
-
-
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -120,7 +120,7 @@ DATABASES = {
         }
     }
 
-
+"""
 
 
 

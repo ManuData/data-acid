@@ -6,4 +6,4 @@ from .models import LeadsForm
 class LeadsForm(forms.ModelForm):
     class Meta:
         model = LeadsForm
-        fields = ['profesion', 'salary_range']
+        fields = ['profession', 'salary_range','email']

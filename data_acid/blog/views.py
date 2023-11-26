@@ -19,9 +19,10 @@ def leads_form(request):
         form = LeadsForm(request.POST)
         if form.is_valid():
             # Process the form data (save to the database, send email, etc.)
+            data_user = form.cleaned_data
             form_data = form.save(commit=False)
             form_data.save()
-            return JsonResponse({'success': True})
+            return JsonResponse({'success': True,"userInput":data_user})
         else:
             return JsonResponse({'success': False, 'errors': form.errors})
     else:
