@@ -7,12 +7,15 @@ from .forms import LeadsForm
 # Create your views here.
 
 
+# Function for the homepage
+
 def index(request):
     #articles = Articles.objects.all()[0]
     #return render(request,"blog/hello_world.html",{"data":articles})
-    return render(request,"blog/hello_world.html")
+    return render(request,"blog/homepage.html")
     
 
+# Function for the leads: 
 
 def leads_form(request):
     if request.method == 'POST':

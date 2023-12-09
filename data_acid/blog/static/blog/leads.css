@@ -1,0 +1,47 @@
+/* Minimalistic form styling */
+
+/* Form container */
+#leadsForm {
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form inputs and labels */
+#leadsForm input[type="text"],
+#leadsForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#leadsForm textarea {
+    height: 100px;
+}
+
+#leadsForm label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Form submit button */
+#leadsForm button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#leadsForm button:hover {
+    background-color: #555;
+}
