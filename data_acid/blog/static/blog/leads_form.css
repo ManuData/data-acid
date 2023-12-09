@@ -5,29 +5,43 @@
     max-width: 400px; /* Adjust as needed */
     margin: 0 auto;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Form inputs and labels */
-#leadsForm input[type="text"],
+
+#leadsForm input {
+    width: calc(100% - 16px); /* Adjust padding to maintain width */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 1px;
+    box-sizing: border-box;
+    display: block;
+    height: 40px; /* Set a fixed height for consistency */
+}
+
+/* Insert here*/
+
+
+
 #leadsForm textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 3px;
     box-sizing: border-box;
-}
 
-#leadsForm textarea {
-    height: 100px;
 }
-
 #leadsForm label {
     font-size: 14px;
     font-weight: bold;
+    display: block;
+    width: 100%; /* Set label width to 100% */
 }
 
 /* Form submit button */
@@ -40,8 +54,14 @@
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 10px; /* Adjust margin as needed */
 }
 
 #leadsForm button:hover {
     background-color: #555;
+}
+
+#leadsForm label::after {
+    content: none; /* Hide the colon */
 }

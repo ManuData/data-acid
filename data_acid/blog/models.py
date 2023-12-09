@@ -15,5 +15,5 @@ class Articles(models.Model):
 
 class LeadsForm(models.Model):
     profession = models.CharField(max_length=100)
-    salary_range = models.IntegerField()
+    salary_range = models.PositiveBigIntegerField()
     email = models.EmailField()

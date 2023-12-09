@@ -1,6 +1,11 @@
 
+{% extends "blog/base.html" %}
+
 {% load static %}
-<link rel="stylesheet" href="{% static 'blog/leads.css' %}">
+
+{% block header-leads-form%} href= "{% static 'blog/leads_form.css' %}" {% endblock %}
+{% block content %}
+        
 <form id="leadsForm" method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -34,3 +39,5 @@ $(document).ready(function() {
     });
 });
 </script>
+{% endblock %}
+
