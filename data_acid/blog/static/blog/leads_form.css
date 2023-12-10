@@ -78,3 +78,69 @@
 #leadsForm label::after {
     content: none; /* Hide the colon */
 }
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .footer {
+        display: block; /* Change display to block for single column layout */
+        text-align: center; /* Align content to the center */
+    }
+
+    .footer-heading {
+        padding: 10px 0; /* Adjust padding for each heading */
+    }
+
+    .footer-heading h2 {
+        margin-bottom: 15px; /* Adjust margin for heading */
+        font-size: 24px; /* Adjust heading font size */
+    }
+
+    .footer-heading a {
+        display: block;
+        margin-bottom: 8px; /* Adjust margin for links */
+        font-size: 16px; /* Adjust link font size */
+    }
+
+    /* Adjustments for form inputs and labels */
+    #leadsForm input[type="text"],
+    #leadsForm input[type="email"],
+    #leadsForm input[id="id_salary_range"],
+    #leadsForm select[id="id_salary_range"],
+    #leadsForm textarea {
+        width: calc(100% - 12px); /* Adjust padding to maintain width */
+        padding: 6px;
+        height: 36px; /* Adjust height */
+        font-size: 16px; /* Adjust input font size */
+    }
+
+    #leadsForm button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    /* Styles for smartphones and smaller devices */
+    #leadsForm {
+        max-width: 100%; /* Adjust container width */
+        padding: 10px; /* Adjust padding */
+    }
+
+    #leadsForm input[type="text"],
+    #leadsForm input[type="email"],
+    #leadsForm input[id="id_salary_range"],
+    #leadsForm select[id="id_salary_range"],
+    #leadsForm textarea {
+        width: calc(100% - 12px); /* Adjust padding to maintain width */
+        padding: 6px;
+        height: 36px; /* Adjust height */
+    }
+
+    #leadsForm button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 12px; /* Adjust font size */
+    }
+}

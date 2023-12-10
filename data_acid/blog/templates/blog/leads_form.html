@@ -7,10 +7,12 @@
 {% block content %}
         
 <form id="leadsForm" method="post">
+    <h1>"6 Figures in 3 Jumps"</h1>
+    <p>Solicita el pdf con estrategias ajustadas a tu rango</p>
     {% csrf_token %}
     {{ form.as_p}}
     
-    <button type="submit">Submit</button>
+    <button type="submit">Download</button>
 </form>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

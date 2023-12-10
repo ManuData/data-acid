@@ -91,3 +91,58 @@ body {
     color: #666;
 }
 
+/* Media queries for navigation bar responsiveness */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .navigation-links a {
+        padding: 10px 12px; /* Adjust padding for links */
+        font-size: 10px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-bar {
+        padding: 8px; /* Further adjust padding */
+    }
+
+    .navigation-links a {
+        padding: 8px 10px; /* Further adjust padding for links */
+        font-size: 8px; /* Further adjust font size */
+    }
+}
+
+/* Media queries for footer responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        display: block; /* Change display to block for single column layout */
+        text-align: center; /* Align content to the center */
+    }
+
+    .footer-heading {
+        padding: 10px 0; /* Adjust padding for each heading */
+    }
+
+    .footer-heading h2 {
+        margin-bottom: 15px; /* Adjust margin for heading */
+    }
+
+    .footer-heading a {
+        display: block;
+        margin-bottom: 8px; /* Adjust margin for links */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        padding: 10px; /* Further adjust padding */
+    }
+
+    .footer-heading a {
+        margin-bottom: 2px; /* Further adjust margin for links */
+        font-size: 8px; /* Further adjust font size */
+    }
+}
